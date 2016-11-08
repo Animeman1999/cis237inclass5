@@ -12,7 +12,7 @@ namespace cis237inclass5
     using System;
     using System.Collections.Generic;
     
-    public partial class Car
+    public partial class cd
     {
         public string id { get; set; }
         public string year { get; set; }

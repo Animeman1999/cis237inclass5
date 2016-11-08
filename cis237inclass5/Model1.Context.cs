@@ -25,6 +25,6 @@ namespace cis237inclass5
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Car> Cars { get; set; }
+        public virtual DbSet<cd> cds { get; set; }
     }
 }

@@ -25,7 +25,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CarsJMartinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Car">
+        <EntityType Name="cd">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -38,7 +38,7 @@
           <Property Name="cylinders" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityContainer Name="CarsJMartinEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Cars" EntityType="Self.Car" />
+          <EntitySet Name="cds" EntityType="CarsJMartinModel.cd" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -46,8 +46,8 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CarsJMartinModelStoreContainer" CdmEntityContainer="CarsJMartinEntities">
-          <EntitySetMapping Name="Cars">
-            <EntityTypeMapping TypeName="CarsJMartinModel.Car">
+          <EntitySetMapping Name="cds">
+            <EntityTypeMapping TypeName="CarsJMartinModel.cd">
               <MappingFragment StoreEntitySet="Cars">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="year" ColumnName="year" />
